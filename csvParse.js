@@ -6,7 +6,7 @@ const csvParse = require('csv-parse/lib/sync'); // requiring sync module
 const file = 'input.csv';
 let data = fs.readFileSync(file);
 
-let res = csvParse(data, {
+let Parse = csvParse(data, {
   delimiter: ',', 
   rowDelimiter: 'auto', 
   quote: '"', 
@@ -17,8 +17,12 @@ let res = csvParse(data, {
   trim: false
 });
 
-console.log(res);
-console.log(res[3]);
-console.log(res[3].gameNumber);
+console.log(Parse);
+
+module.exports = Parse;
+/*
 console.log(res[3]['gameNumber']);
 console.log(res[3].fixtureDate);
+*/
+
+
