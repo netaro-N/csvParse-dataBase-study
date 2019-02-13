@@ -1,6 +1,7 @@
 'use strict';
 // データベースに保存する
 const Parse = require('./csvParse');
+const moment = require('moment-timezone');
 const Fixture = require('./models/fixtures');
 Parse.forEach((f,i) =>{
   console.log(i);
